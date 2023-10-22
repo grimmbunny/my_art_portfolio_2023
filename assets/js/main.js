@@ -8,28 +8,28 @@ const scrollHeader = () =>{
 window.addEventListener('scroll', scrollHeader)
 
 /*=============== SERVICES MODAL ===============*/
-const modalViews2 = document.querySelectorAll('.services__modal')
-const modalBtns2 = document.querySelectorAll('.services__button')
-const modalClose2 = document.querySelectorAll('.services__modal-close')
+// const modalViews2 = document.querySelectorAll('.services__modal')
+// const modalBtns2 = document.querySelectorAll('.services__button')
+// const modalClose2 = document.querySelectorAll('.services__modal-close')
 
 
-let modal2 = function(modalClick) {
-    modalViews2[modalClick].classList.add('active-modal')
-}
+// let modal2 = function(modalClick) {
+//     modalViews2[modalClick].classList.add('active-modal')
+// }
 
-modalBtns2.forEach((mb, i) => {
-    mb.addEventListener('click', () => {
-        modal2(i)
-    })
-})
+// modalBtns2.forEach((mb, i) => {
+//     mb.addEventListener('click', () => {
+//         modal2(i)
+//     })
+// })
 
-modalClose2.forEach((mc) => {
-    mc.addEventListener('click', () => {
-        modalViews.forEach((mv) => {
-            mv.classList.remove('active-modal')
-        })
-    })
-})
+// modalClose2.forEach((mc) => {
+//     mc.addEventListener('click', () => {
+//         modalViews.forEach((mv) => {
+//             mv.classList.remove('active-modal')
+//         })
+//     })
+// })
 
 
 
@@ -57,31 +57,31 @@ modalClose2.forEach((mc) => {
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 
-let swiperTestimonial = new Swiper(".testimonial__container", {
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: true,
+// let swiperTestimonial = new Swiper(".testimonial__container", {
+//     spaceBetween: 24,
+//     loop: true,
+//     grabCursor: true,
 
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
 
-    breakpoints: {
-        576: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 48,
-        },
-        1440: {
-            slidesPerView: 3,
-            spaceBetween: 48,
-          },
-    },
+//     breakpoints: {
+//         576: {
+//           slidesPerView: 2,
+//         },
+//         768: {
+//           slidesPerView: 2,
+//           spaceBetween: 48,
+//         },
+//         1440: {
+//             slidesPerView: 3,
+//             spaceBetween: 48,
+//           },
+//     },
 
-  });
+//   });
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
@@ -224,26 +224,4 @@ hamburger.addEventListener("click", () => {
     // When the menu is not active, remove labels
     removeLabels();
   }
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Get all anchor links on the page
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
-
-  // Prevent default behavior for all anchor links
-  anchorLinks.forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      // Optionally, you can scroll to the anchor manually
-      const targetId = this.getAttribute('href').substring(1); // Remove the '#' symbol
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-        });
-      }
-    });
-  });
 });

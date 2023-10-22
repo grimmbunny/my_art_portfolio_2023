@@ -913,6 +913,13 @@ color: var(--body-color) !important;
   font-size: var(--smaller-font-size);
 }
 
+@media (min-width: 320px) and (max-width: 767px){
+  .footer__social {
+    column-gap: .2rem;
+  }
+
+}
+
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;
