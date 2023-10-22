@@ -481,7 +481,7 @@ body.light-theme {
   .nav__list {
     position: fixed;
     top: 0;
-    right: -60rem;
+    right: -80rem;
     gap: 1;
     flex-direction: column;
     justify-content: center;
