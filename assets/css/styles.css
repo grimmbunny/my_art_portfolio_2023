@@ -368,7 +368,6 @@ body.light-theme {
   align-items: center;
   align-content: center;
   gap: 1rem;
-  transition: 0.4s;
 }
 
 .nav__link {
@@ -475,7 +474,6 @@ body.light-theme {
   .nav__menu {
     backdrop-filter: none;
     align-items: center;
-    transition: 0.4s;
   }
 
   .nav__list {
