@@ -216,44 +216,92 @@ btn.addEventListener('click', function(e) {
 
 
 /*=============== RESPONSIVE HAMBURGER MENU ===============*/
+// const hamburger = document.querySelector(".hamburger");
+// const navMenu = document.querySelector(".nav__list");
+// const navLink = document.querySelectorAll(".nav__link");
+// const navLinkFont = document.querySelectorAll(".nav__link-font");
+// const navLinkIcon = document.querySelectorAll(".nav__link-icon");
+
+// hamburger.addEventListener("click", () => {
+//   hamburger.classList.toggle("active");
+//   navMenu.classList.toggle("active");
+//   navLinkIcon.forEach((icon, index) => {
+//     icon.classList.toggle("hide");
+//     if (hamburger.classList.contains("active")) {
+//       const labels = ["<a href='<a href='https://www.instagram.com/lapiccino/'>instagram</a>", "twitter", "artstation", "behance", "ko-fi", "commissions"];
+//       icon.insertAdjacentHTML("afterend", `<p>${labels[index]}</p>`);
+//     } else {
+//       const insertedPs = document.querySelectorAll(".nav__link-icon + p");
+//       insertedPs.forEach(element => {
+//         element.remove();
+//       });
+//     }
+//   });
+
+//   // Hide nav__link-font elements when the button is clicked
+//   navLinkFont.forEach(font => {
+//     font.classList.add("hide");
+//   });
+// });
+
+// // Add a click event listener to the hamburger button to close the menu and remove the inserted HTML
+// hamburger.addEventListener("click", () => {
+//   if (!hamburger.classList.contains("active")) {
+//     document.querySelectorAll(".nav__link-icon + p").forEach(element => {
+//       element.remove();
+//     });
+
+//     // Unhide nav__link-font elements when the menu is closed
+//     navLinkFont.forEach(font => {
+//       font.classList.remove("hide");
+//     });
+//   }
+// });
+
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav__list");
 const navLink = document.querySelectorAll(".nav__link");
 const navLinkFont = document.querySelectorAll(".nav__link-font");
 const navLinkIcon = document.querySelectorAll(".nav__link-icon");
 
+// Function to add labels (pre-allocate space)
+function addLabels() {
+  const labels = ["instagram", "twitter", "artstation", "behance", "ko-fi", "commissions"];
+  navLinkIcon.forEach((icon, index) => {
+    const label = document.createElement("p");
+    label.textContent = labels[index];
+    icon.insertAdjacentElement("afterend", label);
+  });
+}
+
+// Function to remove labels
+function removeLabels() {
+  const insertedPs = document.querySelectorAll(".nav__link-icon + p");
+  insertedPs.forEach(element => {
+    element.remove();
+  });
+}
+
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
-  navLinkIcon.forEach((icon, index) => {
-    icon.classList.toggle("hide");
-    if (hamburger.classList.contains("active")) {
-      const labels = ["home", "instagram", "twitter", "artstation", "behance", "ko-fi", "commissions"];
-      icon.insertAdjacentHTML("afterend", `<p>${labels[index]}</p>`);
-    } else {
-      const insertedPs = document.querySelectorAll(".nav__link-icon + p");
-      insertedPs.forEach(element => {
-        element.remove();
-      });
-    }
-  });
 
-  // Hide nav__link-font elements when the button is clicked
+  // Toggle the "hide" class for nav__link-font elements
   navLinkFont.forEach(font => {
-    font.classList.add("hide");
+    font.classList.toggle("hide");
   });
-});
 
-// Add a click event listener to the hamburger button to close the menu and remove the inserted HTML
-hamburger.addEventListener("click", () => {
-  if (!hamburger.classList.contains("active")) {
-    document.querySelectorAll(".nav__link-icon + p").forEach(element => {
-      element.remove();
-    });
+  // Toggle the "hide" class for nav__link-icon elements
+  navLinkIcon.forEach(icon => {
+    icon.classList.toggle("hide");
+  });
 
-    // Unhide nav__link-font elements when the menu is closed
-    navLinkFont.forEach(font => {
-      font.classList.remove("hide");
-    });
+  if (hamburger.classList.contains("active")) {
+    // When the menu is active, add labels
+    addLabels();
+  } else {
+    // When the menu is not active, remove labels
+    removeLabels();
   }
 });

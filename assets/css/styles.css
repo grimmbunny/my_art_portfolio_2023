@@ -374,17 +374,13 @@ body.light-theme {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  
-}
-
-.nav__list:active {
-  height: 50vh;
+  gap: 1rem;
+  transition: .4s;
 }
 
 .nav__link {
   color: var(--text-color);
   font-size: 1.2rem;
-  padding: 0 .5rem;
 }
 
 .nav__link-icon {
@@ -413,7 +409,7 @@ body.light-theme {
 .nav__link > p {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  line-height: 0;
+  line-height: 1rem;
 }
 
 .nav__item{
@@ -467,11 +463,6 @@ body.light-theme {
 
 @media(max-width:1024px){
 
-
-  .nav__link-icon-font {
-    margin: 1rem auto;
-  }
-
   .theme-button {
     width: 10vw;
   } 
@@ -496,22 +487,19 @@ body.light-theme {
     backdrop-filter: none;
     align-items: center;
     transition: .4;
-    
   }
 
   .nav__list{
     position: fixed;
-    right: -80rem;
     top: 0;
-    gap: 0;
+    right: -60rem;
+    gap: 1;
     flex-direction: column;
     justify-content: center;
     background-color: hsla(var(--second-hue), 32%, 12%, .8);
     backdrop-filter: blur(10px);
     width: 100vw;
     text-align: center;
-    margin: 10vh auto 0 auto;
-    transition: .4s;
   }
 
   .nav__link-font {
@@ -524,8 +512,11 @@ body.light-theme {
   }
 
   .nav__list.active{
+    top: 0;
     right: 0rem;
     padding: .5rem;
+    margin-top: calc(var(--header-height) + 3rem);
+    transition: .4s linear;
 }
 
 }
@@ -851,12 +842,13 @@ color: var(--body-color) !important;
 }
 
 .footer__container {
-  padding: 2rem 0 6rem;
+  padding: 2rem 0 6rem 0;
 }
 
 .footer__title,
 .footer__link {
   color: var(--body-color);
+  font-size: 1.2rem;
 }
 
 .footer__title {
@@ -884,16 +876,28 @@ color: var(--body-color) !important;
 .footer__social {
   display: flex;
   justify-content: center;
-  column-gap: 1.25rem;
+  column-gap: 1.2rem;
+  align-items: center;
 }
 
 .footer__social-link {
   background-color: var(--body-color);
   color: var(--first-color);
-  padding: .25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
   border-radius: .25rem;
   font-size: 1rem;
-  display: inline-flex;
+}
+
+.footer__social-link-text {
+  background-color: var(--body-color);
+  color: var(--first-color);
+  border-radius: .25rem;
+  font-size: .8rem;
+  font-weight: var(--font-medium);
+
 }
 
 .footer__social-link:hover {
@@ -902,7 +906,7 @@ color: var(--body-color) !important;
 
 .footer__copy {
   display: block;
-  margin-top: 4.5rem;
+  margin-top: 1rem;
   color: var(--container-color);
   text-align: center;
   font-size: var(--smaller-font-size);
