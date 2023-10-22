@@ -368,13 +368,13 @@ body.light-theme {
   align-items: center;
   align-content: center;
   gap: 1rem;
-  transition: 4s;
+  transition: .4s;
 }
 
 .nav__link {
   color: var(--text-color);
   font-size: 1.2rem;
-  transition: 4s;
+  transition: .4s;
 }
 
 .nav__link-icon {
