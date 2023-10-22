@@ -85,25 +85,25 @@ window.addEventListener('scroll', scrollHeader)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
-const sections = document.querySelectorAll('section[id]')
+// const sections = document.querySelectorAll('section[id]')
     
-const scrollActive = () =>{
-  	const scrollDown = window.scrollY
+// const scrollActive = () =>{
+//   	const scrollDown = window.scrollY
 
-	sections.forEach(current =>{
-		const sectionHeight = current.offsetHeight,
-			  sectionTop = current.offsetTop - 58,
-			  sectionId = current.getAttribute('id'),
-			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+// 	sections.forEach(current =>{
+// 		const sectionHeight = current.offsetHeight,
+// 			  sectionTop = current.offsetTop - 58,
+// 			  sectionId = current.getAttribute('id'),
+// 			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
-		if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-			sectionsClass.classList.add('active-link')
-		}else{
-			sectionsClass.classList.remove('active-link')
-		}                                                    
-	})
-}
-window.addEventListener('scroll', scrollActive)
+// 		if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+// 			sectionsClass.classList.add('active-link')
+// 		}else{
+// 			sectionsClass.classList.remove('active-link')
+// 		}                                                    
+// 	})
+// }
+// window.addEventListener('scroll', scrollActive)
 
 /*=============== LIGHT DARK THEME ===============*/ 
 
@@ -147,9 +147,9 @@ const sr = ScrollReveal({
     // reset: true,
 })
 
-sr.reveal(`.nav__link, .nav__logo-svg,`)
+sr.reveal(`.nav__link, .nav__logo-svg, .change-theme`)
 sr.reveal(`.greeting__container`, {delay: 700})
-sr.reveal(`.gallery__container, .change-theme`, {delay: 900, origin: 'bottom'})
+sr.reveal(`.gallery__container`, {delay: 900, origin: 'bottom'})
 
 
 /*=============== EMAIL FORMS ===============*/
@@ -233,3 +233,17 @@ hamburger.addEventListener("click", () => {
   gtag('js', new Date());
 
   gtag('config', 'G-WX7LPS41CJ');
+
+
+  /*=============== LIGHTBOX AJUSTES ===============*/ 
+
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'fadeDuration': 500,
+  })
+
+
+  if (window.location.hash) {
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+    }

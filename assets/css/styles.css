@@ -910,3 +910,104 @@ body.light-theme {
 ::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--second-hue), 8%, 20%);
 }
+
+
+/*=============== COMMISSIONS ===============*/
+
+.commissions__container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 0px;
+  width: 100%;  
+  align-items: center;
+  background-color: var(--container-color);
+  border-radius: .75rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+.commissions__container-2 {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 2rem;
+  background-color: var(--container-color);
+  width: 40%;
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  border-radius: .75rem;
+  padding: 1rem 2rem;
+}
+
+.commissions__title {
+  font-size: var(--biggest-font-size);
+  color: var(--first-color);
+}
+
+.commissions__subtitle {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  margin-bottom: 2.2rem;
+}
+
+.commissions__description {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color-light);
+  padding-left: 2rem;
+}
+
+.commissions__description-nomargins {
+  padding: 0;
+  font-size: var(--small-font-size);
+  margin: 0 auto;
+}
+
+.commissions__description-hr::before {
+  display: block;
+  content: '';
+  width: 70%;
+  height: 2px;
+  background-color: var(--text-color-light);
+  margin-top: 1.5rem;
+
+}
+
+.commissions__imgs__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+
+.commissions__img__frame {
+
+  overflow: hidden;
+}
+
+.commissions__imgs {
+transition: .4s;
+}
+
+.commissions__imgs:hover {
+  transform: scale(1.1);
+  transition: .4s;
+}
+
+.commissions__buttons-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: .5rem;
+  margin: .5rem auto;
+}
+
+.commissions__buttons {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semibold);
+  padding: .5rem;
+}
