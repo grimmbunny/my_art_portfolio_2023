@@ -147,9 +147,9 @@ const sr = ScrollReveal({
     // reset: true,
 })
 
-sr.reveal(`.nav__link, .nav__logo-svg, .change-theme`)
-sr.reveal(`.greeting__container`, {delay: 700})
-sr.reveal(`.gallery__container`, {delay: 900, origin: 'bottom'})
+sr.reveal(`.nav__link, .nav__logo, .change-theme`)
+sr.reveal(`.greeting__container, .commissions__container-2`, {delay: 700})
+sr.reveal(`.gallery__container, .commissions__container`, {delay: 900, origin: 'bottom'})
 
 
 /*=============== EMAIL FORMS ===============*/
