@@ -147,9 +147,9 @@ const sr = ScrollReveal({
     // reset: true,
 })
 
-sr.reveal(`.home__data`)
-sr.reveal(`.home__handle`, {delay: 700})
-sr.reveal(`.home__handle, .home__scroll, .home__social`, {delay: 900, origin: 'bottom'})
+sr.reveal(`.nav__link, .nav__logo-svg,`)
+sr.reveal(`.greeting__container`, {delay: 700})
+sr.reveal(`.gallery__container, .change-theme`, {delay: 900, origin: 'bottom'})
 
 
 /*=============== EMAIL FORMS ===============*/
@@ -177,86 +177,6 @@ btn.addEventListener('click', function(e) {
 
 
 /*=============== RESPONSIVE HAMBURGER MENU ===============*/
-
-// const hamburger = document.querySelector(".hamburger");
-// const navMenu = document.querySelector(".nav__list");
-// const navLink = document.querySelectorAll(".nav__link");
-// const navLinkIcon = document.querySelectorAll(".nav__link-icon");
-// const navLinkSeparator = document.querySelector(".nav__link-separator"); // Get the separator element
-
-// hamburger.addEventListener("click", () => {
-//   toggleMenu();
-// });
-
-// navLink.forEach((n, index) => {
-//   n.addEventListener("click", () => {
-//     toggleMenu();
-//   });
-// });
-
-// function toggleMenu() {
-//   hamburger.classList.toggle("active");
-//   navMenu.classList.toggle("active");
-//   navLinkIcon.forEach((icon, index) => {
-//     icon.classList.toggle("hide");
-//     if (hamburger.classList.contains("active")) {
-//       const labels = ["instagram", "linkedin", "twitter", "artstation", "commissions", "link 3", "linkee"];
-//       icon.insertAdjacentHTML("afterend", `<p>${labels[index]}</p>`);
-//     } else {
-//       const insertedPs = document.querySelectorAll(".nav__link-icon + p");
-//       insertedPs.forEach(element => {
-//         element.remove();
-//       });
-//     }
-//     navLinkSeparator.classList.toggle("hide", hamburger.classList.contains("active"));
-//   });
-// }
-
-
-
-
-/*=============== RESPONSIVE HAMBURGER MENU ===============*/
-// const hamburger = document.querySelector(".hamburger");
-// const navMenu = document.querySelector(".nav__list");
-// const navLink = document.querySelectorAll(".nav__link");
-// const navLinkFont = document.querySelectorAll(".nav__link-font");
-// const navLinkIcon = document.querySelectorAll(".nav__link-icon");
-
-// hamburger.addEventListener("click", () => {
-//   hamburger.classList.toggle("active");
-//   navMenu.classList.toggle("active");
-//   navLinkIcon.forEach((icon, index) => {
-//     icon.classList.toggle("hide");
-//     if (hamburger.classList.contains("active")) {
-//       const labels = ["<a href='<a href='https://www.instagram.com/lapiccino/'>instagram</a>", "twitter", "artstation", "behance", "ko-fi", "commissions"];
-//       icon.insertAdjacentHTML("afterend", `<p>${labels[index]}</p>`);
-//     } else {
-//       const insertedPs = document.querySelectorAll(".nav__link-icon + p");
-//       insertedPs.forEach(element => {
-//         element.remove();
-//       });
-//     }
-//   });
-
-//   // Hide nav__link-font elements when the button is clicked
-//   navLinkFont.forEach(font => {
-//     font.classList.add("hide");
-//   });
-// });
-
-// // Add a click event listener to the hamburger button to close the menu and remove the inserted HTML
-// hamburger.addEventListener("click", () => {
-//   if (!hamburger.classList.contains("active")) {
-//     document.querySelectorAll(".nav__link-icon + p").forEach(element => {
-//       element.remove();
-//     });
-
-//     // Unhide nav__link-font elements when the menu is closed
-//     navLinkFont.forEach(font => {
-//       font.classList.remove("hide");
-//     });
-//   }
-// });
 
 
 const hamburger = document.querySelector(".hamburger");
