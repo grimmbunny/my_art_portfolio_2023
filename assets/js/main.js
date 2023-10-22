@@ -228,6 +228,22 @@ hamburger.addEventListener("click", () => {
 
 
 
-if (window.location.hash) {
-  history.pushState("", document.title, window.location.pathname + window.location.search);
-}
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all anchor links on the page
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+  // Prevent default behavior for all anchor links
+  anchorLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Optionally, you can scroll to the anchor manually
+      const targetId = this.getAttribute('href').substring(1); // Remove the '#' symbol
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+        });
+      }
+    });
+  });
+});
