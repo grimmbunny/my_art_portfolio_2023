@@ -454,6 +454,14 @@ body.light-theme {
 }
 
 @media (max-width: 1024px) {
+  .nGY2Navigationbar
+   {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    align-content: center !important;
+  }
+
   .theme-button {
     width: 10vw;
   }
@@ -652,8 +660,14 @@ body.light-theme {
 
 .nGY2Navigationbar {
   display: flex !important;
-  justify-content: center !important;
+  justify-content: center !important
 }
+
+/* @media (min-width: 1024px) {
+  .nGY2Navigationbar {
+  justify-content: center !important;
+  }
+} */
 
 .nGY2paginationItemCurrentPage:hover {
   background-color: var(--first-color-alt) !important;
