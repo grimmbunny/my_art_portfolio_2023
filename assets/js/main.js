@@ -243,8 +243,3 @@ hamburger.addEventListener("click", () => {
     'fadeDuration': 500,
   })
 
-// Check if there is a hash in the URL
-if (window.location.hash) {
-  // Clear the hash in the URL
-  history.replaceState(null, null, ' '); // Replace the URL without the hash
-}
