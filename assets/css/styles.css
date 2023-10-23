@@ -231,8 +231,9 @@ body.light-theme {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
 }
 
 .grid {
@@ -280,8 +281,39 @@ body.light-theme {
 
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1366px;
+    max-width: 968px;
+    
+  overflow: hidden;
   }
+
+  .nav__logo {
+    max-width: max-content;
+  }
+
+  .nav__logo-svg{
+    width: 40% !important;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2000px) {
+  
+    .nGY2Gallery, .nGY2GallerySub, .gallery__container{
+      max-width: 968px !important;
+      margin: 0 auto !important;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+  .container {
+    max-width: 1366px;
+  overflow: hidden;
+  }
+
+  .nGY2Gallery, .nGY2GallerySub, .gallery__container{
+    max-width: 1366px !important;
+    margin: 0 auto !important;
+  }
+
 }
 
 /*=============== BUTTONS ===============*/
@@ -548,10 +580,21 @@ body.light-theme {
 /*=============== GREETING ===============*/
 
 .greeting__container {
-  width: 50%;
+  width: 40%;
   position: relative;
   row-gap: 4.5rem;
   margin: 9rem auto 0 auto;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+.greeting__container {
+  width: 90%;
+  padding: 0 2rem;
+}
+
+.container {
+  padding: .5rem;
+}
 }
 
 .greeting__h1 {
@@ -569,12 +612,6 @@ body.light-theme {
 }
 
 @media (max-width: 1024px) {
-  .greeting__container {
-    width: 60%;
-    position: relative;
-    row-gap: 4.5rem;
-    margin: 9rem auto 0 auto;
-  }
 
   .greeting__h1 {
     font-size: var(--normal-font-size);
@@ -697,11 +734,11 @@ body.light-theme {
 }
 
 @media screen and (min-width: 1440px) {
-  .gallery__container,
+  /* .gallery__container,
   .nGY2Gallery {
     max-width: 1366px !important;
     margin: 0 auto;
-  }
+  } */
 }
 
 .nGY2ViewerMediaLoaderHidden {
@@ -711,8 +748,19 @@ body.light-theme {
 
 /*=============== CONTACT ===============*/
 .contact__container {
+  grid-template-columns: 1fr 2fr;
   row-gap: 3rem;
   padding-bottom: 3rem;
+  width: 100%;
+}
+
+
+.contact__content {
+  width: 100%;
+}
+
+.contact__form {
+  width: 100%;
 }
 
 .contact__title {
@@ -790,6 +838,11 @@ body.light-theme {
   padding: 1.5rem;
   border-radius: 0.75rem;
   z-index: 1;
+  transition: .4s;
+}
+.contact__form-input:hover {
+  border: 2px solid #fff;
+  transition: .4s;
 }
 
 .contact__form-tag {
@@ -806,9 +859,12 @@ body.light-theme {
   height: 11rem;
 }
 
+
 .contact__form-area textarea {
   resize: none;
 }
+
+
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
@@ -817,23 +873,11 @@ body.light-theme {
     justify-content: center;
   }
 
-  .contact__form {
-    width: 360px;
-    margin: 0 auto;
-  }
 }
 
-@media screen and (min-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px){ 
   .contact__container {
-    grid-template-columns: repeat(2, max-content);
-    justify-content: center;
-    column-gap: 3rem;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .contact__container {
-    width: 968px;
+    grid-template-columns: 1fr;
   }
 }
 
