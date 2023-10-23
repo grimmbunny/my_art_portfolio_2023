@@ -879,6 +879,11 @@ body.light-theme {
   .contact__container {
     grid-template-columns: 1fr;
   }
+
+  .contact__form {
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 
 /*=============== FOOTER ===============*/
