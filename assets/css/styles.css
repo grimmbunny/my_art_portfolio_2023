@@ -987,15 +987,15 @@ body.light-theme {
 /*=============== COMMISSIONS ===============*/
 
 .commissions__container {
+  max-width: 70vw;
   display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-column-gap: 2rem;
-  grid-row-gap: 0px;
+  grid-template-columns: 50% 40%;
+  grid-column-gap: 3rem;
   width: 100%;  
   align-items: center;
   background-color: var(--container-color);
   border-radius: .75rem;
-  padding: 1rem 2rem;
+  padding: 2rem;
   margin-top: 2rem;
 }
 
@@ -1029,7 +1029,6 @@ body.light-theme {
   font-size: var(--h2-font-size);
   font-weight: var(--font-medium);
   color: var(--text-color);
-  margin-bottom: 2.2rem;
 }
 
 .commissions__description {
@@ -1038,6 +1037,32 @@ body.light-theme {
   color: var(--text-color-light);
   padding-left: 2rem;
 }
+
+.commissions__description-promo {
+  display: inline-block;
+  font-size: var(--normal-font-size);
+  font-weight: bold;
+  color: red;
+	transform: scale(1);
+	animation: pulse 1s infinite;
+  padding: 0 1rem;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1.1);
+	}
+
+	70% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.1);
+
+	}
+}
+
 
 .commissions__description-nomargins {
   padding: 0;
@@ -1210,10 +1235,13 @@ transition: .4s;
 
 
 /* Large Devices - Laptop */
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 993px) and (max-width: 1440px) {
   .commissions__container-2 {
-    width: 100%;
-    grid-template-columns: 1fr 2fr;
-    margin-bottom: 1rem;
+    width: 80%;
+  }
+
+  .commissions__container {
+    max-width: 90%;
+
   }
 }
