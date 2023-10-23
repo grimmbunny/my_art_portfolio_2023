@@ -704,6 +704,11 @@ body.light-theme {
   }
 }
 
+.nGY2ViewerMediaLoaderHidden {
+  opacity: .5 !important;
+  transition: .4s !important;
+}
+
 /*=============== CONTACT ===============*/
 .contact__container {
   row-gap: 3rem;
