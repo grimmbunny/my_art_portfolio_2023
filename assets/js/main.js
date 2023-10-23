@@ -244,5 +244,3 @@ hamburger.addEventListener("click", () => {
   })
 
 
-
-    document.location.href = String( document.location.href ).replace( "#/", "" );
