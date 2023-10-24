@@ -230,10 +230,11 @@ body.light-theme {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 968px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
+  overflow: hidden;
 }
 
 .grid {
@@ -280,11 +281,6 @@ body.light-theme {
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 968px;
-    
-  overflow: hidden;
-  }
 
   .nav__logo {
     max-width: max-content;
@@ -298,23 +294,14 @@ body.light-theme {
 @media screen and (min-width: 1440px) and (max-width: 2000px) {
   
     .nGY2Gallery, .nGY2GallerySub, .gallery__container{
-      max-width: 968px !important;
+      max-width: 1300px !important;
       margin: 0 auto !important;
+      overflow: hidden;
     }
 }
 
-@media screen and (min-width: 2000px) {
-  .container {
-    max-width: 1366px;
-  overflow: hidden;
-  }
 
-  .nGY2Gallery, .nGY2GallerySub, .gallery__container{
-    max-width: 1366px !important;
-    margin: 0 auto !important;
-  }
 
-}
 
 /*=============== BUTTONS ===============*/
 
